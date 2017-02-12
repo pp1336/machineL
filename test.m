@@ -1,7 +1,7 @@
 load('cleandata_students');
 
 %Change this emotion_no to fit the emotion type
-emotion_no = 3;
+emotion_no = 6;
 %End of change
 
 error = zeros(10, 1);
@@ -23,7 +23,7 @@ for i = 1:10
 
     [m, n] = size(fold_x);
     attr = [1:n];
-    temp_tree = [tree DTL(fold_x, attr, new_y)];
+    temp_tree = [temp_tree DTL(fold_x, attr, new_y)];
     
 
     %tree_name = string('tree ') + i;
